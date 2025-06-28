@@ -44,3 +44,13 @@ The tool was designed to be run first before the virtual environment concept cam
 Since we install dbt in the virtual environment without the project folder.
 This issue exists
 
+Test the snowflake connection  
+`dbt debug`
+
+This should print out the following  
+<code>
+02:01:46  Registered adapter: snowflake=1.9.4
+02:01:48    Connection test: [OK connection ok]
+
+02:01:48  All checks passed!  
+</code>
