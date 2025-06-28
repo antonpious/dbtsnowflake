@@ -54,3 +54,8 @@ This should print out the following
 
 02:01:48  All checks passed!  
 </code>
+
+
+Setup the raw tables and data using the 
+`setup/create_raw_data.sql`  
+
