@@ -22,6 +22,17 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
+# this is a different behavior
+# it uses the dev schema and this schema
+# even if we don't put the plus it appends
+# staging_prodraw
+# in order to change this behavior override the generate_schema_name macro
+# the generate_database_name macros is correct
+# https://docs.getdbt.com/docs/build/custom-databases#generate_database_name
+# https://docs.getdbt.com/docs/build/custom-schemas#how-does-dbt-generate-a-models-schema-name
+seeds:
+  dbtsnowflake:
+    +schema: prodraw
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models

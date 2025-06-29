@@ -1,0 +1,17 @@
+# use this file for providing the alias names for 
+# each of the transformation file
+# this way the table or view need not be only based on the file name
+# the data_tests would automatically generate the test files for 
+# not null and unique using the column name automatically
+# without having to write these tests our selves
+# the test execution is done by the same run syntax with just the test
+# dbt test --select staging 
+version: 2
+
+seeds:
+  - name: raw_stores
+    description: The location of the stores for selling jaffle
+    config:
+      alias: stores
+
+    

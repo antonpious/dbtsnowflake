@@ -103,3 +103,9 @@ executing the dbt project
 Cleaning the target folders and dbt packages
 `dbt clean`  
 
+
+Loading Seed Data via DBT  
+Though it was designed not to be used, there is a utility to load  
+The folder structure doesn't matter, it picks-up the files as models
+This would load into the dev staging with the same property  
+`dbt seed --select raw_stores`

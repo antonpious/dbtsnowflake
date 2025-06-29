@@ -1,7 +1,6 @@
--- This has the full production data
+create database dbtsnowflake;
 
 create schema prodraw;
-
 
 
 create table customers
@@ -20,13 +19,15 @@ file_format = (
 
 select * from customers limit 10;
 
-drop table raw_orders;
+drop table orders;
 
+-- The date and datetime are two separate fields 
+-- the datetime should be chosen to keep track of time along with date
 create table orders
 (
     id varchar,
     customer varchar,
-    ordered_at date,
+    ordered_at datetime,
     store_id text,
     subtotal integer,
     tax_paid integer,
@@ -44,7 +45,7 @@ file_format = (
 select * from orders limit 10;
 
 
-drop table raw_order_items;
+drop table order_items;
 
 create table order_items(
     id varchar,
@@ -72,7 +73,7 @@ s3://dbt-tutorial-public/long_term_dataset/raw_products.csv
 */
 
 
-drop table raw_products;
+drop table products;
 
 create table products( 
     sku varchar,
@@ -90,6 +91,7 @@ file_format = (
     skip_header = 1
 );
 
+select * from products limit 10;
 
 /*
 supplies
@@ -98,7 +100,7 @@ s3://dbt-tutorial-public/long_term_dataset/raw_supplies.csv
 */
 
 
-select * from products limit 10;
+drop table supplies;
 
 create table supplies(
     id varchar,
@@ -126,10 +128,12 @@ raw_stores
 s3://dbt-tutorial-public/long_term_dataset/raw_stores.csv
 */
 
+drop table stores;
+
 create table stores(
     id varchar,
     name varchar,
-    opened_at date,
+    opened_at datetime,
     tax_rate float
 );
 
@@ -143,3 +147,4 @@ file_format = (
 );
 
 select * from stores limit 10;
+
