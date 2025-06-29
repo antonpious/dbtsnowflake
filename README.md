@@ -59,3 +59,40 @@ This should print out the following
 Setup the raw tables and data using the 
 `setup/create_raw_data.sql`  
 
+Setup the raw tables and data using 
+`setup/create_prod_raw_data.sql`  
+
+Go to the models
+There would be staging, intermediate and data marts  
+
+raw - staging  
+staging - intermediate  
+intermediate to data marts  
+
+For this demo only     
+raw - staging  
+staging - data mart  
+ 
+would be used
+
+The staging folder has __sources
+this should have the source raw tables  
+along with the schema  
+
+creating transformations  
+each file should be names
+source_table__target_table
+with the __ separating source and target
+
+
+Building the dbt project  
+`dbt compile`
+
+This creates a target folder  
+which should have the compile sql that substitutes the jinja syntax
+to actual sql files
+
+
+executing the dbt project
+`dbt run --select staging `  
+

@@ -11,4 +11,7 @@ logs/
 # this seems to be default there is no need to have this
 .venv
 
+# target
+target/
+
 
