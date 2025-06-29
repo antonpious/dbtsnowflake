@@ -92,7 +92,7 @@ This creates a target folder
 which should have the compile sql that substitutes the jinja syntax
 to actual sql files
 
-
 executing the dbt project
-`dbt run --select staging `  
+`dbt run --select staging`    
+
 
