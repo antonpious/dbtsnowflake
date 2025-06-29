@@ -96,3 +96,10 @@ executing the dbt project
 `dbt run --select staging`    
 
 
+`dbt test --select staging`  
+
+
+
+Cleaning the target folders and dbt packages
+`dbt clean`  
+

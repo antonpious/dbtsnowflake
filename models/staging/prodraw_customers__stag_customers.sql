@@ -9,7 +9,7 @@ source as (
 
 ),
 
-renamed as (
+customers as (
     select 
         ----- id
         id as customer_id,
@@ -18,5 +18,6 @@ renamed as (
     from source
 )
 
-select * from renamed
+select * from customers
+
 
