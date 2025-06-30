@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: prodraw_products__stag_products
+    description: different products in the store
+    config:
+      alias: products
+      columns:
+        - name: product_id
+          description: The unique id for the products
+          data_test:
+            - not_null
+            - unique
+           

@@ -10,6 +10,16 @@ sources:
         description: One record per person who has purchase one or more items
       - name: stores
         description:  One record per store for the location of the shop
+      - name: orders
+        description: One record per orders with the order subtotal, tax and total
+      - name: order_items
+        description: product included in an order
+      - name: products
+        description: The various products available in the shop
+      - name: supplies
+        description: The various supplies required for the product
+        
+      
 
     
 

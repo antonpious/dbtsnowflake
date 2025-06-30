@@ -93,7 +93,11 @@ which should have the compile sql that substitutes the jinja syntax
 to actual sql files
 
 executing the dbt project
-`dbt run --select staging`    
+`dbt run --select staging`  
+
+you can also select only a specific model to run  
+`dbt run --select prodraw_order_items__stag_order_items`  
+
 
 
 `dbt test --select staging`  
@@ -108,4 +112,20 @@ Loading Seed Data via DBT
 Though it was designed not to be used, there is a utility to load  
 The folder structure doesn't matter, it picks-up the files as models
 This would load into the dev staging with the same property  
-`dbt seed --select raw_stores`
+`dbt seed --select raw_stores`  
+
+jinja template language [link](https://jinja.palletsprojects.com/en/stable/templates/)  
+
+
+Installing external Packages
+create a packages.yml file
+after putting your package
+
+`dbt deps`  
+
+This could create another folder called
+dbt_packages  
+This needs to be excluded from the git by adding to gitignore file  
+
+
+

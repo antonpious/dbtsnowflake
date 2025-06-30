@@ -1,0 +1,26 @@
+models:
+  - name: prodraw_order_items__stag_order_items
+    description: Individual food and drink items that make up our orders, one row per item.
+    config:
+      alias: order_items
+      columns:
+        - name: order_item_id
+          description: The unique key for each order item.
+          data_tests:
+            - not_null
+            - unique
+        - name: order_id
+          description: The corresponding order each order item belongs to
+          # include a relationship test linking the order table
+          data_tests:
+            - not_null
+            - relationships:
+                to: ref('prodraw_orders__stag_orders')
+                field: order_id
+        - name: product_id
+          description: The corresponding product of the order
+          data_tests:
+            - not_null
+            - relationship:
+              to: ref('prodraw_products__stag__products')
+              field: product_id

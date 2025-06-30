@@ -17,5 +17,14 @@ target/
 # internal notes
 __internal/
 
+# dbt package
+dbt_packages/
+package-lock.yml
+
+
+.ruff_cache
+__pycache__
+
+
 
 
