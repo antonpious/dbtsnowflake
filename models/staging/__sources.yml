@@ -8,6 +8,9 @@ sources:
     tables:
       - name: customers
         description: One record per person who has purchase one or more items
+      - name: stores
+        description:  One record per store for the location of the shop
+
     
 
 # sources:

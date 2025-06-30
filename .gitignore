@@ -14,4 +14,8 @@ logs/
 # target
 target/
 
+# internal notes
+__internal/
+
+
 
