@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name : prodraw_supplies__stag_supplies
+    description: >
+      List of our supply expenses data with basic cleaning and transformation applied.
+
+      One row per supply cost, not per supply. As supply costs fluctuate they receive a new row with a new UUID. Thus there can be multiple rows
+    config:
+      alias: supplies
+      columns:
+        - name: supply_uuid
+          description: The unique id for the supplies
+          data_test:
+            - not_null
+            - unique
