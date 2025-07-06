@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: dm_order_items
+    description: The aggregate table across orders, order items, products and supplies
+    config:
+      alias: order_items
+    columns:
+      - name: order_item_id
+        description: The unique key for each order item
+        data_tests:
+          - not_null
+          - unique

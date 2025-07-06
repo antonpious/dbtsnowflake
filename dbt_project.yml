@@ -20,7 +20,7 @@ snapshot-paths: ["snapshots"]
 
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
-  - "dbt_packages"
+  # - "dbt_packages" don't clean the packages
 
 # this is a different behavior
 # it uses the dev schema and this schema
@@ -44,6 +44,9 @@ models:
   dbtsnowflake:
     staging:
       +materialized: view
+    datamarts:
+      +schema: datamart
+      +materialized: table
     # Config indicated by + and applies to all files under models/example/
     # example:
     #  +materialized: view
