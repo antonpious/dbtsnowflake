@@ -17,8 +17,10 @@ from a_big_table
 
 using targets like prod or dev to limit the number of records to copy  
 
+```
 -- limit the amount of data queried in dev
 {% if target.name != 'prod' %}
 where created_at > date_trunc('month', current_date)
 {% endif %}
+```
 
