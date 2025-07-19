@@ -128,4 +128,12 @@ dbt_packages
 This needs to be excluded from the git by adding to gitignore file  
 
 
+Generating the documentation  
+`dbt docs generate`  
+
+Serving the documentation  
+`dbt docs serve`  
+
+This would open a browser with the following URL  
+http://localhost:8080/#!/overview  
 
